@@ -1,5 +1,5 @@
 # Attractors
-The R codes below produce Aizawa attractors in 3D using plotly.
+The R codes below produce Aizawa strange attractors in 3D using plotly.
 
 ```
 library(deSolve)
