@@ -1,5 +1,5 @@
 # Attractors
-The code below produces Aizawa attractors in 3D using plotly.
+The R codes below produce Aizawa attractors in 3D using plotly.
 
 ```
 library(deSolve)
@@ -8,8 +8,8 @@ library(plotly)
 parms <- c(a = 0.95, b = 0.7, c = 0.6, d = 3.5, e = 0.25, f = 0.1)
 init <- c(x = 0, y = 1, z = 1)
 Aizawa <- function(t = 1, init, parms) {
-  with(as.list(c(parms,init)), {dx <- (z - b) * x - d * y;
-  dy <- d * x + (z - b) * y;
+  with(as.list(c(parms,init)), {dx <- (z - b) * x - d * y
+  dy <- d * x + (z - b) * y
   dz <- c + a * z - ((z ^ 3) / 3) - (x ^ 2 + y ^ 2) * (1 + e * z) + f *  z * x ^ 3
   list(c(dx, dy, dz))
   })
